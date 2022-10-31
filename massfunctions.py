@@ -47,7 +47,7 @@ def getnum(M, z, massfunc='zfourge', interpdir='N'):
             par1, par2 = liwhiteparams(z)
         else: raise ValueError("Unrecognized mass function.  Available keywords include ['illustris', 'zfourge', 'muzzin', 'ilbert', 'liwhite'].")
 
-    if isinstance(M, np.ndarray) or isinstance(M, list):
+    if isinstance(M, list):
         N1 = np.zeros([len(M)])
         N2 = np.zeros([len(M)])
         for i, elem in enumerate(M):
